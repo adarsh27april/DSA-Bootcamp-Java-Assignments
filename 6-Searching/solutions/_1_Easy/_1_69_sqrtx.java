@@ -1,4 +1,4 @@
-package LinearSearch._1_Easy;
+package _1_Easy;
 
 public class _1_69_sqrtx {
     public static void main(String[] args) {
