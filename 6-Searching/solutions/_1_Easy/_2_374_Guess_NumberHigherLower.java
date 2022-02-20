@@ -25,7 +25,8 @@ public class Solution extends GuessGame {
                  * p < mid
                  * 
                  * [---p---|------]
-                 * mid
+                 * 
+                 **** `|` is mid
                  */
                 end = mid - 1;
             } else if (guess(mid) == 1) {
@@ -33,7 +34,8 @@ public class Solution extends GuessGame {
                  * p > mid
                  * 
                  * [------|---p---]
-                 * mid
+                 * 
+                 **** `|` is mid
                  */
                 start = mid + 1;
             } else {
