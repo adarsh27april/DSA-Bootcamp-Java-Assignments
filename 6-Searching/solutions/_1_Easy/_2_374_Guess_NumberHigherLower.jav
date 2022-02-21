@@ -1,7 +1,7 @@
 package _1_Easy;
 
 /**
-                             BINARY SEARCH SOLUTION
+ * BINARY SEARCH SOLUTION
  */
 
 /**
@@ -14,7 +14,7 @@ package _1_Easy;
  *         int guess(int num);
  */
 
-public class Solution extends GuessGame {
+public class Solution2 extends GuessGame {
     public int guessNumber(int n) {
         int start = 1, end = n;
         while (start <= end) {
@@ -25,7 +25,7 @@ public class Solution extends GuessGame {
                  * p < mid
                  * 
                  * [---p---|------]
-                          mid 
+                 * mid
                  **** `|` is mid
                  */
                 end = mid - 1;
@@ -34,7 +34,7 @@ public class Solution extends GuessGame {
                  * p > mid
                  * 
                  * [------|---p---]
-                         mid 
+                 * mid
                  **** `|` is mid
                  */
                 start = mid + 1;
