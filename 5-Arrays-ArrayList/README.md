@@ -2,6 +2,8 @@
 
 ### Medium Section
 
+Q 8. [189. Rotate Array](https://leetcode.com/problems/rotate-array/)
+
 Q 10. [198. House Robber](https://leetcode.com/problems/house-robber/)
 
 
