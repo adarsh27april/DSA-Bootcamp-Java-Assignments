@@ -40,10 +40,10 @@ class Solution27 {
                     if (nums[x] == nums[y]) {
                         nums[x] = Integer.MAX_VALUE;
                         ++count;
-                        --y;
+                        // --y;
                     }
                     ++x;
-                    ++y;
+                    // ++y;
                     if (x < nums.length)
                         if (nums[x] != nums[y]) {
                             y = x - 1;
