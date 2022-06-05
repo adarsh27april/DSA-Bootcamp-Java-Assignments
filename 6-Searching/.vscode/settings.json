@@ -1,6 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "solutions"
+        "code"
     ],
     "java.project.outputPath": "bin",
 }
