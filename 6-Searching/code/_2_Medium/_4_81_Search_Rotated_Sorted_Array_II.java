@@ -19,7 +19,6 @@ class Solution4 {
       }
 
       int pivot = findPivot(nums);
-      int ans = -1;
 
       if (pivot > -1) {
          if (binarySearch(nums, target, 0, pivot)) {
