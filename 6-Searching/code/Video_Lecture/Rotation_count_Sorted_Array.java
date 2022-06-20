@@ -7,10 +7,8 @@ public class Rotation_count_Sorted_Array {
    public static void main(String[] args) {
       int arr[] = { 15, 18, 2, 3, 6, 12 };
       int pivot = findPivot(arr);
-      if (pivot == -1)
-         System.out.println(0);
-      else
-         System.out.println(pivot + 1);
+
+      System.out.println(pivot + 1);
    }
 
    public static int findPivot(int arr[]) {
