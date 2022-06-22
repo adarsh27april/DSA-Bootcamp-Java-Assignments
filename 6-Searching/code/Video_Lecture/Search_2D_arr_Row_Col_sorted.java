@@ -2,7 +2,7 @@ package Video_Lecture;
 
 import java.util.Arrays;
 
-public class Binary_Search_2D_arr {
+public class Search_2D_arr_Row_Col_sorted {
    public static void main(String[] args) {
       int[][] matrix1 = {
             { 10, 20, 30, 40 },
@@ -18,12 +18,12 @@ public class Binary_Search_2D_arr {
       };
       int[][] matrix3 = { { 10, 20, 30, 40 } };
       int target = 30;
-      System.out.println(Arrays.toString(Binary_Search_2D_Arr(matrix1, target)));
-      System.out.println(Arrays.toString(Binary_Search_2D_Arr(matrix2, target)));
-      System.out.println(Arrays.toString(Binary_Search_2D_Arr(matrix3, target)));
+      System.out.println(Arrays.toString(Search_2D_Arr(matrix1, target)));
+      System.out.println(Arrays.toString(Search_2D_Arr(matrix2, target)));
+      System.out.println(Arrays.toString(Search_2D_Arr(matrix3, target)));
    }
 
-   public static int[] Binary_Search_2D_Arr(int[][] matrix, int target) {
+   public static int[] Search_2D_Arr(int[][] matrix, int target) {
       int r = 0, c = matrix[0].length - 1;
       while (r < matrix.length && c >= 0) {
          if (target == matrix[r][c]) {
