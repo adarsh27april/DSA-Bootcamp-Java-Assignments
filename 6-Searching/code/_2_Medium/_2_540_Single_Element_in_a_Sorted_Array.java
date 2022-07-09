@@ -1,3 +1,7 @@
+/**
+ * https://leetcode.com/problems/single-element-in-a-sorted-array/discuss/627921/Java-or-C%2B%2B-or-Python3-or-Easy-explanation-or-O(logn)-or-O(1)
+ */
+
 package _2_Medium;
 
 public class _2_540_Single_Element_in_a_Sorted_Array {
@@ -23,6 +27,7 @@ class Solution2 {
             } else {
                end = mid;
             }
+
          } else {// mid is odd
             if (nums[mid] == nums[mid - 1]) {
                start = mid + 1;
