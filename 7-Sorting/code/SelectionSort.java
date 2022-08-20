@@ -4,11 +4,11 @@ public class SelectionSort {
    public static void main(String[] args) {
       int[] arr = { 3, 4, 1, 2, 5 };
       // int[] arr = { 5, 4, 3, 2, 1 };
-      SelectionSort(arr);
+      Selection_Sort(arr);
       System.out.println(Arrays.toString(arr));
-   }                       
+   }
 
-   static void SelectionSort(int[] arr) {
+   static void Selection_Sort(int[] arr) {
       for (int i = 0; i < arr.length; i++) {
          // find max item in array & swap it with correct index
          int last = arr.length - 1 - i;
