@@ -8,7 +8,7 @@ public class _442_Find_All_Duplicates_in_an_Array {
    public static void main(String[] args) {
       Solution ob = new Solution();
       int[] arr = {4, 3, 2, 7, 8, 2, 3, 1};
-      List<Integer> list = ob.findAllDuplicates(arr);
+      List<Integer> list = ob.findDuplicates(arr);
       System.out.println(Arrays.toString(arr));
       System.out.println(list);
    }
@@ -16,7 +16,7 @@ public class _442_Find_All_Duplicates_in_an_Array {
 
 
 class Solution {
-   public List<Integer> findAllDuplicates(int[] arr) {
+   public List<Integer> findDuplicates(int[] arr) {
       List<Integer> list = new ArrayList<>();
       int i = 0;
       while (i < arr.length) {
