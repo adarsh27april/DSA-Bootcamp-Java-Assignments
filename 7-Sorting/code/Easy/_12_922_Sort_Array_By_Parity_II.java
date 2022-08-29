@@ -7,51 +7,15 @@ public class _12_922_Sort_Array_By_Parity_II {
       // int[] nums = {4, 2, 5, 7};
       int[] nums = {3, 1, 4, 2};
       Solution12 ob = new Solution12();
-      ob.sortArrayByParityII___b(nums);
+      ob.sortArrayByParityII(nums);
       System.out.println(Arrays.toString(nums));
    }
 }
 
 
 class Solution12 {
-   public int[] sortArrayByParityII___a(int[] nums) {
 
-      int even = 0;
-      for (int i = 0; i < nums.length; i++) {
-         if (nums[i] % 2 == 0) {
-            if (i % 2 == 0) {
-               even += 2;
-
-            } else {
-               swap(nums, i, even);
-               even += 2;
-            }
-         }
-      }
-
-      return nums;
-   }
-
-   public int[] sortArrayByParityII___b(int[] nums) {
-
-      int i = 0;
-      while (i < nums.length - 1) {
-         if (i % 2 == 0) {
-            if (nums[i] % 2 != 0) {
-               swap(nums, i, i + 1);
-
-            } else {
-               ++i;
-            }
-         } else {
-            ++i;
-         }
-      }
-
-      return nums;
-   }
-
-   public int[] sortArrayByParityII___c(int[] nums) {
+   public int[] sortArrayByParityII(int[] nums) {
       int i = 0, j = nums.length - 1;
       int l = nums.length;
       while (i < l) {
