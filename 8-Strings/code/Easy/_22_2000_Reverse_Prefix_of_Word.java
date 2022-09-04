@@ -3,11 +3,10 @@ package Easy;
 public class _22_2000_Reverse_Prefix_of_Word {
    public static void main(String[] args) {
       Solution22 ob = new Solution22();
-      String s = ob.reversePrefix("abcdefd", "d");
+      String s = ob.reversePrefix("abcdefd", 'd');
       System.out.println(s);
    }
 }
-
 
 class Solution22 {
    public String reversePrefix(String word, char ch) {
