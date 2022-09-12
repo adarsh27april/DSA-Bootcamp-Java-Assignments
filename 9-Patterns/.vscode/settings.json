@@ -1,0 +1,13 @@
+{
+    "java.project.sourcePaths": [
+        "code"
+    ],
+    "java.project.outputPath": "bin",
+    "editor.snippetSuggestions": "none",
+    "editor.quickSuggestions": {
+        "other": "off"
+    },
+    "editor.formatOnType": false,
+    "java.format.onType.enabled": false,
+    "java.format.comments.enabled": false,
+}
