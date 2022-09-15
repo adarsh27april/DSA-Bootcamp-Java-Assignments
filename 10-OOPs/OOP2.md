@@ -218,3 +218,9 @@ public class P3 {
 }
 
 ```
+Output
+```
+This is Singleton Class
+This is Singleton Class
+This is Singleton Class
+```
