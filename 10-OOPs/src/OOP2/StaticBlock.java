@@ -13,13 +13,16 @@ public class StaticBlock {
       StaticBlock ob1 = new StaticBlock();
       System.out.println(StaticBlock.a + " " + StaticBlock.b);
 
-      // ob1.b += 3;// Error : The static field StaticBlock.b should be accessed in a static way
+      // ob1.b += 3;// Error : The static field StaticBlock.b should be accessed in a
+      // static way
       StaticBlock.b += 3;
 
       System.out.println(StaticBlock.a + " " + StaticBlock.b);
 
       StaticBlock ob2 = new StaticBlock();
       System.out.println(StaticBlock.a + " " + StaticBlock.b);
+      System.out.println(ob1);
+      System.out.println(ob2);
 
    }
 }

@@ -10,6 +10,10 @@ public class App {
         Human Ankita = new Human(8, "Ankita", false, "Female");
 
         System.out.println(Human.population);
+        System.out.println(Adarsh);
+        System.out.println(Harsh);
+        System.out.println(Satyam);
+        System.out.println(Ankita);
     }
 
     void greeting() {

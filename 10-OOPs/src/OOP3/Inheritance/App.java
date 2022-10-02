@@ -12,5 +12,6 @@ public class App {
 
       BoxPrice ob2 = new BoxPrice(5.0, 10, 200);
       System.out.println(ob2);
+      System.out.println(ob1);
    }
 }

@@ -19,5 +19,6 @@ class Student {
 public class P1 {
    public static void main(String[] args) {
       Student s1 = new Student(5, "Adarsh", 12000);
+      System.out.println(s1);
    }
 }
