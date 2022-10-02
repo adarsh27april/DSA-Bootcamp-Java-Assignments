@@ -48,7 +48,8 @@ classname class-var = new classname ( );
 Here, class-var is a variable of the class type being created. The classname is the name of the class that is being instantiated. The class name followed by parentheses specifies the constructor for the class. A constructor defines what occurs when an object of a class is created.
  
 You might be wondering why you do not need to use new for such things as integers or characters.
-The answer is that Java's primitive types are not implemented as objects.
+> The answer is that Java's primitive types are not implemented as objects.
+
 Rather, they are implemented as "normal" variables.
 This is done in the interest of efficiency.
 
@@ -58,7 +59,6 @@ Box b1 = new Box();
 Box b2 = b1;
 ```
 b1 and b2 will *both refer to the same object*. The assignment of b1 to b2 did not allocate any memory or copy any part of the original object. It simply makes b2 refer to the same object as does b1. Thus, any changes made to the object through b2 will affect the object to which b1 is referring, since they are the same object.
-
 When you assign one object reference variable to another object reference variable, you are not creating a copy of the object, you are only making a copy of the reference.
 
 ```java
@@ -97,9 +97,11 @@ To add a finalizer to a class, you simply define the finalize( ) method. The Jav
 it is about to recycle an object of that class. Right before an asset is freed, the Java run time calls the finalize( )
 method on the object.
 
+```java
 protected void finalize( ) {
     // finalization code here
 }
+```
 
 Constructors:
 
@@ -115,11 +117,13 @@ new Box( ) is calling the Box( ) constructor.
 Inheritance and constructors in Java:
 
 In Java, constructor of base class with no argument gets automatically called in derived class constructor.
-For example, output of following program given below is:
+> The Base class construct is called before Derived class constructor
 
+For example, output of following program given below is:
+```
 Base Class Constructor Called
 Derived Class Constructor Called
-
+```
 ```java
 
  // filename: Main.java
