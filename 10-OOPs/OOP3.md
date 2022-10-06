@@ -297,3 +297,7 @@ As you might expect, it is illegal to declare a class as both abstract and final
 That is why static interface method must have a body.
 
 NOTE : Polymorphism does not apply to instance variables.
+
+
+## Abstraction Vs Encapsulation 
+![Abstraction Vs Encapsulation](assets/Abstraction%20Vs%20Encapsulation.png)
