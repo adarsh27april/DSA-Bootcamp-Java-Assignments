@@ -229,7 +229,10 @@ public class Main implements GenInt<Integer> {
 }
 ```
 
-# Comparable interface
+# Comparing Objects
+## using Comparable interface
+
+Comparable Interface is a `generic interface` which has `compareTo` method declared in it so we just have to define it when we are implementing it
 
 ```java
 public class Student implements Comparable<Student> {
@@ -299,9 +302,9 @@ public class Main {
 O/P : [70.0, 74.4, 75.5, 77.7, 83.0]
 ```
 
-Other flavours of using the Comparator
+## Other flavours of using the Comparator
 
-## Overriding the `compare` method of the `Comparator` class by implementing it in the argument list only
+### Overriding the `compare` method of the `Comparator interface` by implementing it in the argument list only.
 ```java
 Arrays.sort(list, new Comparator<Student>() {
    @Override
@@ -317,7 +320,7 @@ Arrays.sort(list, new Comparator<Student>() {
 });
 ```
 
-## Using lambda expression
+### Using lambda expression
 ```java
 Arrays.sort(list,
       (o1, o2) -> (int) (o1.marks - o2.marks));
@@ -333,7 +336,7 @@ import java.util.function.Consumer;
 public class LambdaFun {
    public static void main(String[] args) {
       // compare it with javascript arrow functions
-      // labda functions can be use to convert in to onle line functions
+      // labda functions can be use to convert in to onle line functions 
 
       ArrayList<Integer> arr = new ArrayList<>();
       for (int i = 0; i < 5; i++) {
@@ -380,3 +383,172 @@ interface Operation {
    // if we make more that one function of similar type then we will get error.
 }
 ```
+
+
+# Exception Handling
+
+The 5 Keywords : 
+
+ * `try`
+ * `catch`
+ * `finally`
+ * `throw`
+ * `throws`
+
+```java
+public static void main(String[] args) {
+      int a = 5;
+      int b = 0;
+
+      try {
+         // int c = a / b; // java can by default catch the exceptions but we can explicitly throw them as well
+         // System.out.println(c);
+
+         divide(a, b);
+
+      } catch (Exception e) {
+         // the exception thrown is catched here
+
+         System.out.println("Exception Catched :\n" + e.getMessage());
+      } finally {
+         System.out.println("this will always execute, doesn't matter if error is thrown or not thrown");
+      }
+}
+
+static int divide(int a, int b) throws ArithmeticException {
+      // here we have to explicity declare the exception
+      if (b == 0) {
+         // here we are explicitly throwing an exception
+         throw new ArithmeticException("please do not divide by 0");
+         // here constructor of ArithmeticException is called when throwing
+      }
+      return a / b;
+   }
+```
+
+Handling multiple exceptions
+
+```java
+try {
+   divide(a, b);
+} catch (ArithmeticException e) {
+   // More strict exception rules should be handled first
+
+   System.out.println("Exception Catched :\n" + e.getMessage());
+
+} catch (Exception e) {
+   System.out.println("Exception Catched :\n" + e.getMessage());
+
+} finally {
+   System.out.println("this will always execute, doesn't matter if error is thrown or not thrown");
+}
+```
+
+## Custom Exception
+
+```java
+package OOP6.ExceptionHandling;
+
+public class CustomException extends Exception {
+   public CustomException(String message) {
+      super(message);
+   }
+}
+```
+
+Usage : 
+
+```java
+package OOP6.ExceptionHandling;
+
+public class P2 {
+   public static void main(String[] args) {
+      try {
+         String name = "Adarsh";
+         if (name == "Adarsh") {
+            throw new CustomException("--Custom Exception--");
+         }
+
+      } catch (CustomException e) {
+         System.out.println(e.getMessage());
+      }
+   }
+}
+```
+
+# Object Cloning
+
+Naive way of cloning a Object
+
+`Human.java`
+```java
+public class Human {
+   int age;
+   String name;
+
+   public Human(int age, String name) {
+      this.age = age;
+      this.name = name;
+   }
+
+   public Human(Human other) {
+      this.age = other.age;
+      this.name = other.name;
+   }
+
+}
+```
+
+`Main.java`
+```java
+public class Main {
+   public static void main(String[] args) {
+      Human adarshKS = new Human(22, "Adarsh");
+      Human asdf = new Human(adarshKS);
+   }
+}
+```
+
+The `new` Keyword usage has a significant time overhead
+
+In `java.lang` package we have `Cloneable` interface which we can implement in the class the object of whose clone we want to create.
+
+`Human.java`
+```java
+public class Human implements Cloneable {
+   int age;
+   String name;
+
+   public Human(int age, String name) {
+      this.age = age;
+      this.name = name;
+   }
+
+   public Human(Human other) {
+      this.age = other.age;
+      this.name = other.name;
+   }
+
+   @Override
+   public Object clone() throws CloneNotSupportedException {
+      return super.clone();
+   }
+}
+```
+
+```java
+public class Main {
+   public static void main(String[] args) throws CloneNotSupportedException {
+      Human adarshKS = new Human(22, "Adarsh");
+      Human asdf = new Human(adarshKS);
+
+      Human twin = (Human) adarshKS.clone();
+
+      System.out.println(twin.age + ", " + twin.name);
+   }
+}
+```
+
+In the `java.lang` packege the implementation of `Cloneable` interface we do not have any methods defined, it's actually only telling the JVM that we have to perform `clone()` on our object of `class-type`
+
+`.clone()` is doing <a>shallow-copy</a>

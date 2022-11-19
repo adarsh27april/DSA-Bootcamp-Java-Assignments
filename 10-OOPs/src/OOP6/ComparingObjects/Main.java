@@ -14,24 +14,23 @@ public class Main {
       Student list[] = { adarsh, kushagra, abhishek, vikash, pratik };
 
       // Arrays.sort(list);
-      // Arrays.sort(list, new Comparator<Student>() {
 
-      // @Override
-      // public int compare(Student o1, Student o2) {
-      // // think of it as
-      // // calling o1.compareTo(o2)
-      // // or
-      // // o1 - o2
-      // return (int) (o1.marks - o2.marks);
-      // // to sort in reverse order use
-      // // -(int)(o1.marks - o2.marks)
-      // }
-
-      // });
+      Arrays.sort(list, new Comparator<Student>() {
+         @Override
+         public int compare(Student o1, Student o2) {
+            // think of it as
+            // calling o1.compareTo(o2)
+            // or
+            // o1 - o2
+            return (int) (o1.marks - o2.marks);
+            // to sort in reverse order use
+            // -(int)(o1.marks - o2.marks)
+         }
+      });
 
       // using lambda expression
-      Arrays.sort(list,
-            (o1, o2) -> -(int) (o1.marks - o2.marks));
+      // Arrays.sort(list,
+      // (o1, o2) -> -(int) (o1.marks - o2.marks));
 
       System.out.println(Arrays.toString(list));
       // the sort method of Arrays class uses compareTo method to compare any two
