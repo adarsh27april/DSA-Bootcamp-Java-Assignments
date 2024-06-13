@@ -1,2 +1,4 @@
 /bin
+# bin/  ignore all bin directories anywhere below the current level in directory tree
 /lib
+*.class
