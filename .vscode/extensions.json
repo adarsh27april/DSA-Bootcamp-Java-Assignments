@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "vscjava.vscode-java-pack", // Extension Pack for Java
+        "github.codespaces", // GitHub Codespaces
+        "formulahendry.code-runner", // Code Runner
+        "visualstudioexptteam.vscodeintellicode", // IntelliCode
+        "visualstudioexptteam.vscodeintellicode-api-usage-examples", // IntelliCode API Usage Examples
+        "yzhang.markdown-all-in-one", // Markdown All in One
+        "vscode-icons-team.vscode-icons" // vscode-icons
+    ]
+}
